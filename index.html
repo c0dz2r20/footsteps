@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Footsteps</title>
+  </head>
+  <body>
+     <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+           <h3>Footsteps</h3>
+           <div class="alert-primary">
+             <p>Days Left: <span class="days-left "></span></p> 
+           </div>
+           <ul class="major-tasks list-group">
+              <li class="list-group-item">Admin Panel</li>
+              <li class="list-group-item">React JS</li>
+              <li class="list-group-item">Django</li>
+              <li class="list-group-item">Portfolio Website</li>
+           </ul>
+        </div>
+     </div>
+     
+        <div class="upload-section container">
+           <div class="form-floating">
+              <textarea name="" id="" cols="60" rows="5" class="textarea form-control"></textarea>
+           </div>
+           <div class="submit-buttons">
+              <button class="btn btn-primary update-btn">Update</button>
+              <br><br>
+              <button class="btn btn-danger runagain-btn">Fetch updates</button>
+              
+              
+           </div>
+        </div>
+
+     <div class="container table-wrapper">
+        <table class="table table-bordered ">
+         <div class="table-responsive table-responsive-sm">
+            <div class="table align-middle">
+               <thead class='table-headers'>
+                  <tr class='table-success'> 
+                     <th>Day Summary</th>
+                     <th>Time</th>
+                  </tr>
+               </thead>
+               <tbody class='body-rows data-table'> 
+               </tbody>
+               
+            </div>
+            
+         </div>
+        </table>
+
+     </div>
+      <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+      <script src="main.js"></script>
+  </body>
