@@ -17,11 +17,7 @@ var firebaseConfig = {
     textarea = document.getElementsByClassName('textarea')[0],
     form = document.getElementsByClassName('form')[0]
 
-    
- runagain_btn.onclick = () => {
-       location.reload()
-    }
- // Collection data
+    // Collection data
  updateBtn.onclick = (e) => {
      
     let createDb = db.collection('footsteps').doc()
@@ -42,7 +38,7 @@ var firebaseConfig = {
  showDataTable = () => {
      // To display as it is submitted
     let dbRef = db.collection('footsteps').orderBy("logTime", "desc")
-    dbRef.get().then((querySnapshot) => {
+    dbRef.onSnapshot((querySnapshot) => {
        querySnapshot.forEach((doc) => {
           let tr = document.createElement('tr')
     
@@ -66,12 +62,11 @@ var firebaseConfig = {
  
 // Updating days left
 let days_left = document.getElementsByClassName('days-left')[0]
-let d = 36;
+let d = 28;
 let createDb_daysLeft = db.collection('daysleft').doc("dayCount")
 
 daysLeft = () => {
     setInterval(() => {
-        d  = d - 1
         createDb_daysLeft.set({
             daysLeft: d - 1
         })
